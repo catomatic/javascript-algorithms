@@ -18,12 +18,12 @@ var knuthShuffle = function(someList) {
   return someList;
 }
 
-var bogoSort = function(someList) {
+var bogoSort = function(shuffle, someList) {
   var count = 0;
   while (count < 1000) {
     for (i = 0; i < (someList.length - 1); i++) {
       while (someList[i] > someList[i + 1]) {
-        knuthShuffle(someList);
+        shuffle(someList);
       }
     }
     count += 1;
@@ -46,7 +46,7 @@ var shortWordList = ['orange', 'flying squirrel', 'banana', 'grapes', 'bob'];
 // console.log(knuthShuffle(longNumList));
 // console.log(knuthShuffle(longWordList));
 
-console.log(bogoSort(longNumList));
-console.log(bogoSort(shortNumList));
-console.log(bogoSort(longWordList));
-console.log(bogoSort(shortWordList));
+console.log(bogoSort(knuthShuffle, longNumList));
+console.log(bogoSort(knuthShuffle, shortNumList));
+console.log(bogoSort(knuthShuffle, longWordList));
+console.log(bogoSort(knuthShuffle, shortWordList));
