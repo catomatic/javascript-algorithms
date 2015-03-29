@@ -31,7 +31,7 @@ var negafibonacci = function(num) {
       fibNegList.push(s0);
     }
   } else {
-    return 'Must be greater than 1.'
+    return 'Must be less than 1.'
   }
   for (i = 0; i < fibNegList.length; i++) {
     console.log(fibNegList[i]);
